@@ -13,7 +13,7 @@ android:
 before_script:
   - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
   - emulator -avd test -no-skin -no-audio -no-window &
-  - ./gradlew clean build     # download all the dependencies and compile everything while we are waiting for the emulator
+#  - ./gradlew clean build     # download all the dependencies and compile everything while we are waiting for the emulator
   - android-wait-for-emulator
   - ./gradlew assembleDebugTest -i
 
